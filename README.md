@@ -19,6 +19,9 @@ Ensure you have the following installed:
 •	Node.js (for optional frontend enhancements)
 •	MongoDB (local or cloud instance like MongoDB Atlas)
 •	Flask
+•	Templates folder contain all html files
+•	Static folder contain 3 folders(styles and images and javascript)
+
 **Step 1: Clone the Repository**
 •	 https://github.com/JosemarBarroso/COM4003-Web-A2.git 
 •	 cd jobportal-web-app

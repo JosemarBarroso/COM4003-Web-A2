@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard - JobPortal</title>
+    <link rel="stylesheet" href="../static/styles/studentDashboard.css" />
+    <script defer src="../static/javascript/studentDashboard.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">JobPortal</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Find Jobs</a></li>
+          <li><a href="/studentProfile">Profile</li>
+        </ul>
+      </nav>
+      
+      <div class="nav-buttons">
+        <div class="dropdown">
+            <img src="../static/images/man.jpg" class="profile-icon" onclick="toggleDropdown()" />
+            <div id="profileDropdown" class="dropdown-content">
+                <a href="/studentProfile">View Profile</a>
+            </div>
+        </div>
+        <button id="logout-btn">Logout</button>
+    </div>
+    </header>
+
+    <!-- Search Bar -->
+    <!-- Search Bar -->
+<!-- Search Bar -->
+<section class="search-bar">
+  <input type="text" id="search" placeholder="Search jobs by title or skill..." />
+  <button onclick="searchJobsBySkill()">Search</button>
+</section>
+
+<!-- Job Listings -->
+<div id="studentJobsList"></div> 
+
+
+<!-- Job Listings -->
+<div id="studentJobsList"></div>
+    <!-- Job Cards will be loaded dynamically here -->
+
+
+
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 JobPortal. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </footer>
+  </body>
+</html>

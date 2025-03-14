@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard - JobPortal</title>
+    <link rel="stylesheet" href="../static/styles/employerDashboard.css">
+    <script defer src="../static/javascript/employerDashboard.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">JobPortal</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Find Candidates</a></li>
+                <li><a href="#">Posts</a></li>
+            </ul>
+        </nav>
+        <div class="nav-buttons"> 
+            <button class="create-btn" onclick="window.location.href='/createJobPost'">
+                <i class="fas fa-plus-circle"></i> Create Job Post
+            </button>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <!-- Student Search Section -->
+    <section class="search-bar">
+        <input type="text" id="searchSkill" placeholder="Search candidates by skills..." />
+        <button onclick="searchStudentsBySkill()">Search</button>
+    </section>
+
+    <!-- Student Profiles Section -->
+    <section class="student-section">
+        <h2>Available Candidates</h2>
+        <div id="studentProfilesList"></div>
+    </section>
+
+    <!-- Job Posting Section -->
+    <section class="job-section">
+        <h2>My Job Posts</h2>
+        <div id="employerJobsList"></div> <!-- Only one ID for job posts -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 JobPortal. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="#">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+    </footer>
+
+</body>
+</html>

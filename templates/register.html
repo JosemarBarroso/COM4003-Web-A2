@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Job Portal</title>
+  <link rel="stylesheet" href="../static/styles/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2>Register for Job Portal</h2>
+
+    <form id="registerForm">
+      <!-- Role Selection -->
+      <div class="form-group">
+        <label for="role">Register as:</label>
+        <select id="role" required>
+          <option value="">Select Role</option>
+          <option value="student">Student</option>
+          <option value="employer">Employer</option>
+        </select>
+      </div>
+
+      <!-- Common Fields -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required autocomplete="new-password" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" required autocomplete="new-password" />
+        </div>
+      </div>
+      <div class="form-group custom-group">
+        <label for="profilePic">Upload Profile Picture:</label>
+        <img id="profilePicPreview" class="hidden" style="max-width: 20px;" />
+        <div class="input-with-icons">
+    
+          <input type="file" id="profilePic" accept="image/*" onchange="previewImage(event)" />
+          <i class="fas fa-edit icon edit-icon" onclick="document.getElementById('profilePic').click()"></i>
+          <i class="fas fa-trash icon delete-icon" onclick="deleteImage()"></i>
+
+        </div>
+        
+      </div>
+      <!-- Student-Specific Fields -->
+      <div id="studentFields" class="hidden">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" autocomplete="new-password" />
+          </div>
+          
+        </div>
+
+        <div class="form-group">
+          <label for="academic">Academic Timeline(list of educational institutions, fields of
+            study, years attended)</label>
+          <textarea id="academic" autocomplete="new-password"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Work Experience(list of positions, companies, responsibilities,
+            duration)
+          </label>
+          <textarea id="experience" autocomplete="new-password"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="skills">Key Skills:</label>
+          <div id="skills-container" class="skills-box">
+            <input type="text" id="skills-input" placeholder="Type a skill and press Enter" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Employer-Specific Fields -->
+      <div id="employerFields" class="hidden">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" autocomplete="new-password" />
+          </div>
+          <div class="form-group">
+            <label for="website">Company Website:</label>
+            <input type="url" id="website" autocomplete="new-password" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+    <p class="signup-text">
+      Already have an account? <a href="/login">Login</a>
+    </p>
+  </div>
+
+  <script src="../static/javascript/script.js"></script>
+</body>
+
+</html>

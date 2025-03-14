@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/styles/profile.css">
+    <script defer src="../static/javascript/studentProfile.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">JobPortal</div>
+        <nav>
+            <ul>
+                <li><a href="/studentDashboard">Dashboard</a></li>
+                <li><a href="#">Find Jobs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="profile">
+        <h2>Student Profile</h2>
+        <p>
+            <strong>Name:</strong> 
+            <span id="profile-name">John Doe</span>
+            <i class="fas fa-edit edit-icon" onclick="enableEdit('profile-name', 'fullName')"></i>
+            <input type="text" id="fullName" class="edit-input" style="display: none;">
+        </p>
+        
+
+        <p>
+            <strong>Email:</strong> 
+            <span id="profile-email"></span>
+            <i class="fas fa-edit edit-icon" onclick="enableEdit('profile-email')"></i>
+            <input type="text" id="email" class="edit-input">
+        </p>
+
+        <p>
+            <strong>Phone:</strong> 
+            <span id="profile-phone"></span>
+            <i class="fas fa-edit edit-icon" onclick="enableEdit('profile-phone')"></i>
+            <input type="text" id="phone" class="edit-input">
+        </p>
+
+        <p>
+            <strong>Skills:</strong> 
+            <span id="profile-skills"></span>
+            <i class="fas fa-edit edit-icon" onclick="enableEdit('profile-skills')"></i>
+            <input type="text" id="skills" class="edit-input">
+        </p>
+
+        <p>
+            <strong>Academic Timeline:</strong> 
+            <span id="profile-academic"></span>
+            <i class="fas fa-edit edit-icon" onclick="enableEdit('profile-academic')"></i>
+            <input type="text" id="academic" class="edit-input">
+        </p>
+
+        <p>
+            <strong>Work Experience:</strong> 
+            <span id="profile-experience"></span>
+            <i class="fas fa-edit edit-icon" onclick="enableEdit('profile-experience')"></i>
+            <input type="text" id="experience" class="edit-input">
+        </p>
+
+        <button id="saveChangesBtn" onclick="updateProfile()">Save Changes</button>
+    </section>

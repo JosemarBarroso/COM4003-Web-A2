@@ -1,0 +1,116 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.profile {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.profile p {
+    font-size: 16px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile p strong {
+    flex: 1;
+}
+
+.profile span {
+    flex: 2;
+    color: #555;
+}
+
+.edit-icon {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.edit-icon:hover {
+    color: #0056b3;
+}
+
+.edit-input {
+    display: none;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+#saveChangesBtn {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+#saveChangesBtn:hover {
+    background: #218838;
+}
+
+/* Disable editing on Name field */
+#profile-name {
+    color: gray;
+}
+
+.disabled {
+    color: gray !important;
+    cursor: not-allowed !important;
+}

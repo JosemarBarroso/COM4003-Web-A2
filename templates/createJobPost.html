@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/createJobPost.css">
+    <title>Create Job Post</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Create a Job Post</h2>
+        <form id="jobForm">
+            <label>Job Title</label>
+            <input type="text" id="title" placeholder="Enter job title" required>
+            
+            <label>Company Name</label>
+            <input type="text" id="company" placeholder="Enter company name" required>
+            
+            <label>Location</label>
+            <input type="text" id="location" placeholder="Enter job location" required>
+            
+            <label>Job Description</label>
+            <textarea id="description" placeholder="Describe the job role" required></textarea>
+
+            <label>Required Skills (comma-separated)</label>
+            <input type="text" id="skills" placeholder="e.g. JavaScript, React, Python" required>
+
+            <button type="submit">Post Job</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("jobForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            let job = {
+                title: document.getElementById("title").value,
+                company: document.getElementById("company").value,
+                location: document.getElementById("location").value,
+                description: document.getElementById("description").value,
+                skills: document.getElementById("skills").value.split(",").map(skill => skill.trim()) // Convert input into an array
+            };
+
+            try {
+                let response = await fetch("http://127.0.0.1:5000/create-job", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(job)
+                });
+
+                let result = await response.json();
+                if (response.ok) {
+                    alert("Job posted successfully!");
+                    window.location.href = "/employerDashboard";  // Redirect after posting
+                } else {
+                    alert("Error: " + result.error);
+                }
+            } catch (error) {
+                console.error("Error posting job:", error);
+                alert("Failed to post job.");
+            }
+        });
+    </script>
+</body>
+</html>

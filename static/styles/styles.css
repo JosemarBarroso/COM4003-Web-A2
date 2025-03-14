@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 7px; /* Adds space between input fields */
+}
+
+.login-heading {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  flex: 1;
+  background: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-btn {
+  width: 100%;
+}
+
+.login-text {
+  text-align: center;
+}
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Two-Column Layout */
+.form-row {
+  display: flex;
+  gap: 14px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdbbbb;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 40px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #fff;
+  cursor: text;
+}
+
+/* Skill tag inside input */
+.skill-tag {
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Remove button (X) */
+.skill-tag .remove {
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Skills input field (inside container) */
+#skills-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 100px;
+  padding: 5px;
+}
+button {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  /* margin-top: 10px; */
+  width: 100%;
+}
+.custom-group{
+  height: 100px;
+  width: auto;
+}
+button:hover {
+  background: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+signup-text {
+  margin-top: 25px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.input-with-icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icons input {
+  width: 100%;
+  padding-right: 60px; /* Space for icons */
+  padding-left: 10px;
+  height: 40px;
+
+}
+
+.input-with-icons .icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: gray;
+  transition: 0.3s;
+}
+
+.input-with-icons .icon:hover {
+  color: black;
+}
+
+.input-with-icons .edit-icon {
+  right: 35px;
+}
+
+.input-with-icons .delete-icon {
+  right: 10px;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+

@@ -54,6 +54,7 @@ python app.py
 2.	Flask processes the request and queries MongoDB.
 3.	MongoDB returns the data to Flask, which sends it back to the frontend.
 4.	The frontend dynamically updates the UI with the retrieved data.
+
 **API Endpoints**
 Authentication & User Management
 Method	Endpoint	Description
